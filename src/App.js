@@ -28,10 +28,7 @@ function App() {
 
         <h2>Team Builder Added - {addUser.length}</h2>
 
-          {
-            addUser.map( (add) => <li key={add.phone}>{add}</li>)
-          }
-
+        
          
           
         {/* <ul>
@@ -41,9 +38,19 @@ function App() {
         </ul> */}
 
 
-          {
-            users.map(user => <User user={user} addhandleClick={addhandleClick} key={user.phone} ></User>)
-          }
+        <div style={{display: 'flex'}}>
+            <div>
+              {
+                users.map(user => <User user={user} addhandleClick={addhandleClick} key={user.phone} ></User>)
+              }
+            </div>
+            <div>
+              {
+                addUser.map( (add) => <li key={add.phone}>{add}</li>)
+              }
+            </div>
+
+        </div>
 
         
     </div>
